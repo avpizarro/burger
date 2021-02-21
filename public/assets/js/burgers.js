@@ -46,38 +46,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
     });
   }
-});
+
 
 // CREATE
 const submitBurgerBtn = document.getElementById("submit");
+const textarea = document.getElementById("newBurgerInput");
 
-submitBurgerBtn.addEventListener("click", (e) => {
-  console.log("click");
-  e.preventDefault();
-  const textarea = document.getElementById("newBurgerInput");
+  submitBurgerBtn.addEventListener("click", (e) => {
+    console.log("click");
+    e.preventDefault();
 
-  // Grabs the value of the textarea that goes by the name, "newBurgerInput"
-  const newBurger = {
-    burger_name: textarea.value.trim(),
-    devoured: 0,
-  };
+    // Grabs the value of the textarea that goes by the name, "newBurgerInput"
+    const newBurger = {
+      burger_name: textarea.value.trim(),
+      devoured: 0,
+    };
 
-  // Send POST request to create a new burger
-  fetch("/api/burgers", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
+    // Send POST request to create a new burger
+    fetch("/api/burgers", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
 
-    // make sure to serialize the JSON body
-    body: JSON.stringify(newBurger),
-  }).then(() => {
-    // Empty the form
-    document.getElementById("newBurgerInput").value = "";
+      // make sure to serialize the JSON body
+      body: JSON.stringify(newBurger),
+    }).then(() => {
+      // Empty the form
+      document.getElementById("newBurgerInput").value = "";
 
-    // Reload the page so the user can see the new quote
-    console.log("Created a new Burger!");
-      location.reload();
+      // Reload the page so the user can see the new quote
+      console.log("Created a new Burger!");
+      location.reload("/");
+    });
   });
 });
