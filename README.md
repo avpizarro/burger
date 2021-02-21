@@ -23,7 +23,7 @@
   Follow this :link: [Eat Da Burger!](https://dry-basin-87988.herokuapp.com/) to use the app. 
 
   ## Usage
-  Add a description of the burger you want to eat and then click the submit button to add it tothe list. Click on the Devour it! button to eat your burger, the eaten burger will move to the list on the right.
+  Add a description of the burger you want to eat. Click the 'Submit' button to add it to the list. Eat it by clicking the 'Devour it!' button, the eaten burger will move to the list on the right.
 
   ## License
   This Source Code Form is subject to the terms of the MIT License. 
