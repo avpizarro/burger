@@ -1,6 +1,28 @@
-    <img src="../public/assets/img/burger.png" />
-    <h1>Eat-Da-Burger!</h1>
-    <form>
-      <div><textarea rows="4" cols="40">Add your burger here</textarea></div>
-      <button type="submit">Submit</button>
-    </form>
+<img src="/assets/img/burger.png" />
+<h1>Eat-Da-Burger!</h1>
+<div class="pure-g">
+  <div class="pure-u-1-2 burgerToEat">
+    <ul>
+      {{#each burgers}}
+      {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+      {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="pure-u-1-2 eatenBurger">
+    <ul>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<form>
+  <div><textarea rows="4" cols="50" id="newBurgerInput"></textarea></div>
+  <button type="submit" id="submit">Submit</button>
+  <div class="label">Add your burger and click submit</div>
+</form>

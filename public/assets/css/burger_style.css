@@ -4,8 +4,14 @@ body {
   margin-top: 150px;
 }
 
+ul {
+  list-style: none;
+  padding-bottom: 20px;
+}
+
 button {
-  margin: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
   font-size: 16px;
   border-radius: 4px;
   background-color: rgb(247, 161, 3);
@@ -16,11 +22,25 @@ button {
 }
 
 textarea {
-  font-size: 16px;
-  padding-top: 45px;
-  color: grey;
   text-align: center;
   border-color: rgb(190, 190, 190);
   border-radius: 6px;
   box-shadow: 2px 4px 4px rgb(163, 162, 162);
 }
+
+.label {
+  padding-top: 20px;
+  font-size: 16px;
+  color: grey;
+  text-align: center;
+}
+
+.burgerToEat {
+  text-align: right;
+}
+
+.eatenBurger {
+  text-align: left;
+  color: grey;
+}
+
