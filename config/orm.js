@@ -10,8 +10,8 @@ const orm = {
       cb(result);
     });
   },
-  insertOne(db, table, cols, vals, cb) {
-    let queryString = `INSERT INTO ${db}.${table} (${cols}) VALUES ('${vals}');`;
+  insertOne(table, cols, vals, cb) {
+    let queryString = `INSERT INTO ${table} (${cols}) VALUES ('${vals}');`;
     console.log(queryString);
     connection.query(queryString, (err, result) => {
       if (err) {
